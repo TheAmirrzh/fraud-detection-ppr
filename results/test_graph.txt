@@ -1,0 +1,6 @@
+UserA UserB
+UserB UserC
+UserC UserA
+UserD UserA
+Fraud1 UserB
+Fraud1 Fraud2

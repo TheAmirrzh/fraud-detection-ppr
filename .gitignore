@@ -1,0 +1,25 @@
+# --- Python Standard ---
+src/__pycache__/
+*.py[cod]
+*$py.class
+
+# --- Virtual Environments ---
+venv/
+.venv/
+env/
+
+# --- IDE Settings ---
+.vscode/
+.idea/
+.qodo/
+
+# --- Operating System ---
+.DS_Store
+Thumbs.db
+
+# Ignore temporary files created during scalability tests
+data/temp_subgraph.txt
+
+# BUT keep the data directory itself (if empty)
+!data/.gitkeep
+
