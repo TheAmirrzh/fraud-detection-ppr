@@ -11,7 +11,7 @@ The core engine is built on **Sparse Matrix** logic (Compressed Sparse Row) to e
 
 ## 🚀 Features
 * **Custom PPR Engine:** Implements the Power Iteration method: $r^{(t+1)} = (1-\alpha)r^{(t)}M + \alpha p$.
-* **Sparse Optimization:** Uses `scipy.sparse` for efficient memory usage on large graphs[cite: 26].
+* **Sparse Optimization:** Uses `scipy.sparse` for efficient memory usage on large graphs.
 * **Edge Case Handling:**
     * **Rank Sinks:** Automatically redistributes mass from dangling nodes (dead ends) to maintain stochasticity.
     * **Disconnected Components:** Handles graph fragmentation gracefully.
