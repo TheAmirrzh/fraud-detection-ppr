@@ -160,7 +160,6 @@ class FraudGraphEngine:
         scores = {self.reverse_map[i]: s for i, s in enumerate(r)}
         return scores
 
-    # --- Add this to FraudGraphEngine class ---
     def run_monte_carlo_ppr(self, seed_ids: List[str], num_walks: int = 10000) -> Dict[str, float]:
         """
         Bonus Task: Approximates PPR using Monte Carlo Random Walks.
