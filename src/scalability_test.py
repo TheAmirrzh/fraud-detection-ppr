@@ -10,8 +10,6 @@ from graph_engine import FraudGraphEngine
 DATA_URL = "https://snap.stanford.edu/data/facebook_combined.txt.gz"
 RAW_DATA_PATH = "data/facebook_combined.txt"
 
-# ... [Keep download_facebook_data and create_subgraph_file distinct] ...
-# (You can copy those two functions from the previous script, or just overwrite the class below)
 
 def download_facebook_data():
     if os.path.exists(RAW_DATA_PATH): return
@@ -45,7 +43,6 @@ def run_scalability_benchmark():
         engine = FraudGraphEngine(epsilon=1e-6)
         engine.load_graph_from_edgelist(temp_file)
         
-        # --- FIX: Pick the Highest Degree Node as Seed ---
         # This ensures we always hit the Giant Component
         degrees = np.array(engine.adj_matrix.sum(axis=1)).flatten()
         top_node_idx = np.argmax(degrees)
